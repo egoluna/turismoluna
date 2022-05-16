@@ -1,0 +1,38 @@
+<div class="container mt-5 mb-5" >
+	{{!--ENCABEZADO--}}
+	<div class="container mb-4">
+		<div class="row">
+			<div class="col-12">
+			<p class="text-end text-uppercase text-info fs-3"> {{usuario}} </p>
+            </div>            
+		</div>
+		<div class="row  d-flex justify-content-end">
+			<div class="col-12 text-end ">
+				<a class="btn btn-danger rounded-pill" href="/admin/login/logout">
+				Cerrar sesión  <i class="fas fa-sign-out-alt"></i></a>
+			</div>
+		</div>
+	</div>	
+
+    {{!--M06U01 --}}
+    <div class="row ">
+        <div class="col-12">
+            <h3>PANEL</h3>
+        </div>
+
+        <div class="container ">
+            <div class="row  d-flex justify-content-evenly">
+                <div class="col text-end">
+                        <a class="btn border btn-success rounded-pill w-50" href="/admin/novedades">
+                        <i class="fa fa-newspaper"></i>    NOVEDADES</a>
+                </div>
+                <div class="col">
+                        <a class="btn border btn-success rounded-pill w-50" href="/admin/destinos">
+                        <i class="fa fa-globe"></i> DESTINOS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!--FIN M06U01 --}}
+</div>

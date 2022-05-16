@@ -1,0 +1,30 @@
+<div class="container" style="margin:100px auto">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h4>Confirma que desea eliminar:</h4>
+      <form action="/admin/novedades/eliminar" method="post">
+        <input type="hidden" value="{{novedad.id}}" name="id">
+        <div class="mb-3 text-end">
+        <label class="form-label">Fecha: {{novedad.dia}}/{{novedad.mes}}/{{novedad.anio}}</label>
+        </div>
+        <div class="mb-3">
+          <label for="idtitulo" class="form-label">Título:</label>
+          <input type="text" class="form-control rounded" id="idtitulo" name="titulo" value="{{novedad.titulo}}" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="idsubtitulo" class="form-label">Subtítulo:</label>
+          <input type="text" class="form-control rounded" id="idsubtitulo" name="subtitulo" value="{{novedad.subtitulo}}" readonly>
+        </div>
+        <div class="mb-3">
+          <label for="idcuerpo" class="form-label">Cuerpo:</label>
+          <textarea class="form-control rounded" id="idcuerpo" rows="3"  name="cuerpo" readonly>{{novedad.cuerpo}}</textarea>
+        </div>
+        <div class="text-end">
+        <button type="submit" class="btn btn-primary rounded-pill">Eliminar</button>        
+        <a class="btn btn-primary rounded-pill" href='/admin/novedades'>Cancelar</a>
+        </div>
+      </form>      
+
+    </div>
+  </div>
+</div>

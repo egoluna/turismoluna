@@ -1,0 +1,39 @@
+<div class="container" style="margin:100px auto">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h4>Agregar un DESTINO</h4>
+      <form action="/admin/destinos/agregarDestino" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="idtitulo" class="form-label">Lugar de destino:</label>
+          <input type="text" class="form-control rounded" id="idtitulo" placeholder="Destino" name="titulo">
+        </div>
+        <div class="mb-3">
+          <label for="idsubtitulo" class="form-label">Duración:</label>
+          <input type="text" class="form-control rounded" id="idsubtitulo" placeholder="Duración y acotación"
+            name="subtitulo">
+        </div>
+        {{!Imagen--M06U03----------------------------------------------------------------------}}
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Imagen:</label>
+          <input type="file" name="imagen" id="imagen" />
+        </div>
+        {{!Imagen------------------------------------------------------------------------}}
+        <div class="mb-3">
+          <label for="idcuerpo" class="form-label">Cuerpo:</label>
+          <textarea class="form-control rounded" id="idcuerpo" rows="3" placeholder="Describa el destino"
+            name="cuerpo"></textarea>
+        </div>
+
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary rounded-pill"><i class="fa-solid fa-floppy-disk"></i>  Guardar</button>
+          <a class="btn btn-secondary rounded-pill" href='/admin/destinos'><i class="fa-solid fa-rectangle-xmark"> </i> Cancelar</a>
+
+        </div>
+      </form>
+      {{#if error}}
+      <br>
+      <h6 class="text-danger">{{message}}</h6>
+      {{/if}}
+    </div>
+  </div>
+</div>

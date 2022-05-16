@@ -1,0 +1,48 @@
+<div class="container" style="margin:100px auto">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h4>Modificar un destino</h4>
+      <form action="/admin/destinos/modificarDestino" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{{destino.id}}" name="id">
+        <div class="mb-3">
+          <label for="idtitulo" class="form-label">Título:</label>
+          <input type="text" class="form-control rounded" id="idtitulo" name="titulo" value="{{destino.titulo}}">
+        </div>
+        <div class="mb-3">
+          <label for="idsubtitulo" class="form-label">Subtítulo:</label>
+          <input type="text" class="form-control rounded" id="idsubtitulo" name="subtitulo"
+            value="{{destino.subtitulo}}">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Imagen:</label><br>
+          {{{imagen}}}</div>
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Agregar o modificar imagen:</label>
+          <input type="file" name="imagen" id="imagen" />
+        </div>
+        <div class="mb-3">                    
+          <input type="checkbox" name="imgEliminar" id="checkEliminar" value=1 />
+          <label for="checkEliminar" class="form-label">Tildar para eliminar la imagen del destino</label>          
+          <input type="hidden" name="imgOriginal" value="{{destino.imagen}}" />
+        </div>
+        <div class="mb-3">                    
+          <label for="idcuerpo" class="form-label">Cuerpo:</label>
+          <textarea class="form-control rounded" id="idcuerpo" rows="5" name="cuerpo">{{destino.cuerpo}}</textarea>
+        </div>
+        <div class="text-end">
+          {{#if error}}
+          <button type="submit" class="btn btn-primary rounded-pill" disabled>Modificar</button>
+          {{else}}
+          <button type="submit" class="btn btn-primary rounded-pill">Modificar</button>
+
+          {{/if}}
+          <a class="btn btn-secondary rounded-pill" href='/admin/destinos'>Cancelar</a>
+        </div>
+      </form>
+      {{#if error}}
+      <br>
+      <h6 class="text-danger">{{message}}</h6>
+      {{/if}}
+    </div>
+  </div>
+</div>

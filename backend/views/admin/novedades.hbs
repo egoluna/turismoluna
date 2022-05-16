@@ -1,0 +1,60 @@
+<div class="container mt-4 mb-4">
+
+	{{!--ENCABEZADO--}}
+	<div class="container mb-4">
+		<div class="row">
+			<p class="text-end text-uppercase text-info fs-3"> {{usuario}} </p>
+		</div>
+		<div class="row  d-flex justify-content-between">
+			<div class="col-6">
+				<a class="btn btn-secondary rounded-pill" href="/admin/panel">
+				<i class="fa-solid fa-angles-left"></i> Volver al PANEL </a>
+			</div>
+			<div class="col-6 text-end" >
+				<a class="btn btn-danger rounded-pill" href="/admin/login/logout">
+				Cerrar sesión  <i class="fas fa-sign-out-alt"></i></a>
+			</div>
+		</div>
+	</div>	
+	<hr/>
+	{{!--listad --}}	
+	<div class="row">
+		<div class="col-7">
+			<h3>Noticias</h3>
+		</div>
+		<div class="col-5 text-end">
+			<a class="btn btn-success  rounded-pill" href="/admin/novedades/agregar"><i class="fa fa-plus">
+				</i>Agregar Novedad</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Mes</th>
+						<th scope="col">Titulo</th>						
+						<th scope="col">Imagen</th>{{!--M06U03 --}}						 
+						<th scope="col" class="text-end">Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each novedades}}
+					<tr>
+						<th scope="col">{{dia}}/{{mes}}/{{anio}}</th>
+						<td> {{titulo}}</td>
+						<td> {{{imagen}}}</td> {{!--M06U03 --}}						 
+						<td class="text-end">
+							<a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-secondary">{{!--M06U02 --}}
+								<i class="fa fa-pencil"></i></a>
+							<a href="/admin/novedades/eliminar/{{id}}" class="btn btn-sm btn-secondary">{{!--M06U02 --}}
+								<i class="fa fa-trash"></i></a>
+						</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	{{!--FIN M06U01 --}}
+</div>

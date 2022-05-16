@@ -1,0 +1,52 @@
+.homeing{
+    margin-bottom: 1.5em;    
+}
+.columnas{
+    overflow: hidden;
+}
+.bienvenidos, .testimonios{
+    box-sizing: border-box;
+}
+.bienvenidos{
+    width: 70%;
+    padding-right: 2em;
+}
+.tituloacordeon{
+    background-color: #11a4ac;
+    padding: 1em;
+    color:white;
+}
+
+.aviso{
+    background-color: #2cD4dc;
+    padding: 1em;
+    color:white;
+}
+.aviso h3{
+    font-family: 'Handlee', cursive;
+    color:blue;
+    font-size: 1.5em;
+}
+.testimonios{ 
+    width: 30%;
+    font-family: 'Handlee', cursive;
+}
+.testimonio{
+    background-color: #Aaa;
+    padding: 1em;
+    margin-bottom: 0.6em;
+    color:white;
+    border-radius: 20% 0 0 20%;
+}
+.testimonio .cita{
+     font-weight: bold; 
+    /* font-style: italic; */
+    font-size:1.2em;
+    display: block;
+}
+.testimonio .autor{
+    font-size: 1em;
+    text-align: center;
+    margin: 1em 0;
+    display: block;
+}

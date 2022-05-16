@@ -1,0 +1,28 @@
+nav{
+    background-color:#aacccd;
+    margin-bottom: 2em;
+}
+nav ul{
+    list-style: none;
+    padding:0;    
+}
+nav ul li{
+    display: inline-block;
+    width: 16.5%;
+}
+nav ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    text-align:center;
+    display:block;
+    padding: 0.2em 0.4em;
+}
+nav ul li a:hover{
+    background-color: rgba(0,0, 0, 0.3);
+    color: red;
+    
+}
+nav ul li a.activo{
+    background-color: #137e91;
+    color: white;
+} 
